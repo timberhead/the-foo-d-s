@@ -5,7 +5,7 @@ const userRoutes = require("./user-routes");
 // const restaurantRoutes = require("./restaurant-routes");
 
 router.use("/user", userRoutes);
-router.use("/review", reviewRoutes);
-router.use("/restaurant", restaurantRoutes);
+// router.use("/review", reviewRoutes);
+// router.use("/restaurant", restaurantRoutes);
 
 module.exports = router;
