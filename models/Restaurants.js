@@ -22,3 +22,5 @@ Restaurants.init(
 	},
 	{ sequelize, underscored: true, modelName: "restaurants" }
 );
+
+module.exports = Restaurants;
