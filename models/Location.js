@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Dishes extends Model {}
+class Location extends Model {}
 
-Dishes.init(
+Location.init(
 	{
 		id: {
 			type: DataTypes.INTEGER,
@@ -11,16 +11,26 @@ Dishes.init(
 			primaryKey: true,
 			autoIncrement: true,
 		},
-		price: {
-			type: DataTypes.DECIMAL(10, 2),
-			allowNull: false,
-		},
-		name: {
+		street_address: {
 			type: DataTypes.STRING,
 			allowNull: false,
+			validate: {
+				isAlphanumeric: true,
+			},
 		},
-		description: {
+		city: {
 			type: DataTypes.STRING,
+			allowNull: false,
+			validate: {
+				isAlpha: true,
+			},
+		},
+		state: {
+			type: DataTypes.STRING,
+			allowNull: false,
+			validate: {
+				isAlpha: true,
+			},
 		},
 		restaurant_id: {
 			type: DataTypes.INTEGER,
@@ -31,11 +41,5 @@ Dishes.init(
 			},
 		},
 	},
-	{
-		sequelize,
-		underscored: true,
-		modelName: "dishes",
-	}
+	{ sequelize, freezeTableName: true, underscored: true, modelName: "location" }
 );
-
-module.exports = Dishes;

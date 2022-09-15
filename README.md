@@ -6,7 +6,7 @@
 
 
 
-<h1 align="center">Fair Fare</h1>
+<h1 align="center">The Fair Fare</h1>
   
 ![badge](https://img.shields.io/badge/license-Apache-blue)<br/>
 ## Table of Contents
@@ -37,7 +37,7 @@
 
 ## Issues
 
- see Issues: Volumes I through V. 
+ There are no issues at this time. 
 
 ## User Story
 
@@ -45,23 +45,48 @@
  <br/>
  I WANT to share my review with as many other people as possible
  <br/>
- SO THAT I get the word out about this resturant and discover resturants with great meals from other users reviews
+ SO THAT I can get the word out about this resturant and discover resturants with great meals from other users reviews
  <br/>
 
 ## Acceptance Criteria
 
- GIVEN I am using the application Foodie Dives
+ GIVEN I am using the application "The Fair Fare"
  <br/>
  WHEN I open the application
  <br/>
- THEN the webpage is displayed in the browser
+ THEN the webpage is displayed in the browser 
  <br/>
- WHEN I click on the nav bar
+ WHEN I click on the Login/register button
  <br/>
- THEN I am presented with...............
+ THEN I am presented with a Login/Register form 
  <br/>
+ WHEN I enter my username and password in the Register form
+ <br/>
+ THEN I am logged in directed back to the webpage
+ <br/>
+ WHEN I click on the Category Selector button
+ <br/>
+ THEN I am presented with a list of resturants types
+ <br/>
+ WHEN I click on a resturant type
+ <br/>
+ THEN I am presented with multiple cards, each representing a local resturant and an image of their signature meal
+ <br/>
+ WHEN I click on a resturant card
+ <br/>
+ THEN I am presented with the resturant's rating and number of reviews, and the meal's rating and number of reviews
+ <br/>
+ WHEN I click on a specific meal
+ <br/>
+ THEN I am presented with a form to add my own review for that meal
+ <br/>
+ WHEN I complete my review and submit
+ <br/>
+ THEN my review is added to the database for other users to view 
 
 ## Usage
+
+Once you've opened the webpage and are logged in, you can select types of local resturants from a list.  After you select a resturant type, you'll see a display of one or more resturants.  Each resturant will be displayed with its overall rating, and its best meal with its individual rating.  You can simply use the app to find highly rated meals at resturants that you would have overlooked, due to the resturants overall rating.  You can also add your own review of a resturants meal.  Your review will be added to the database to help other people find a great meal.    
 
 ## License
 
@@ -79,7 +104,9 @@ This application is covered by the Apache license.
 
 ## Github
 
- Link to our Github repository: ................
+ Link to our Github repository:
+ <br/>
+ https://github.com/timberhead/the-foo-d-s
 
 ## Deployed Links:
 
@@ -101,5 +128,5 @@ Christopher Boyle&nbsp;&nbsp;&emsp;github.com/timberhead&nbsp;&nbsp;&nbsp;&emsp;
 <br/>
 <br/>
 <br/>
-<h3 align="center">This README was generated with ❤️ by fine folks at [README.md-Generator]</h3>
+<h3 align="center">This README was generated with ❤️ by fine folks at the-foo-d-s</h3>
  
