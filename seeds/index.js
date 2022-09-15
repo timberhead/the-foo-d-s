@@ -9,12 +9,12 @@ const seedUsers = require("./usersData");
 const seedAll = async () => {
   await sequelize.sync({ force: true });
 
-  await seedDishes();
-  await seedDishReviews();
   await seedFoodTypes();
-  await seedLocation();
   await seedRestaurants();
+  await seedDishes();
   await seedUsers();
+  await seedDishReviews();
+  await seedLocation();
 
   process.exit(0);
 };
