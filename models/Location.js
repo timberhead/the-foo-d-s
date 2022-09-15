@@ -37,7 +37,6 @@ Location.init(
       allowNull: false,
       validate: {
         len: [5],
-        len: [9],
       },
     },
     restaurant_id: {
