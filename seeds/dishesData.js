@@ -1,3 +1,6 @@
+const { Dishes } = require("../models");
+
+const dishesData = 
 [
     {
         price: "$11.00",
@@ -54,3 +57,8 @@
         restaurant_id: "3"
     }
 ]
+
+const seedDishes = () => Dishes.bulkCreate(dishesData);
+
+module.exports = seedDishes;
+
