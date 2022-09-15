@@ -6,6 +6,8 @@
     <title>Fair Fare</title>
     <link rel="stylesheet" type="text/css" href="/css/jass.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link href="/dist/style.css" rel="stylesheet" />
+
   </head>
 
   <body>
@@ -16,7 +18,7 @@
     <nav>
       <a href="/">Home</a>
       {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
+        <button id="logout" class="btn">Logout</button>
       {{else}}
         <a href="/login">Login</a>
       {{/if}}

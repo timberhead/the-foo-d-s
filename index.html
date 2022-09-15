@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fair Fare</title>
+    <link rel="stylesheet" type="text/css" href="public/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <link href="/dist/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Fair Fare</h1>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      {{#if loggedIn}}
+      <button id="logout" class="btn-no-style">Logout</button>
+      {{else}}
+      <a href="/login">Login</a>
+      {{/if}}
+    </nav>
+    <main>
+      <div>Card goes here.</div>
+    </main>
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    <footer>
+      <h1>Made with ❤️ by fine folks at the-foo-d-s</h1>
+    </footer>
+  </body>
+</html>
