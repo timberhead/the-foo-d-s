@@ -64,7 +64,7 @@ aside {
 nav {
   display: flex;
   background-color: var(--secondary);
-  align-content: flex-end;
+  justify-content: flex-end;
 }
 
 nav a {
@@ -137,7 +137,7 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: #c6e29a;
   color: var(--light);
 }
 
