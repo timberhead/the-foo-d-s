@@ -61,3 +61,4 @@ const dishesData =
 const seedDishes = () => Dishes.bulkCreate(dishesData);
 
 module.exports = seedDishes;
+
