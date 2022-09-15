@@ -50,4 +50,11 @@ DishReviews.belongsTo(Users, {
 	foreignKey: "user_id",
 });
 
-module.exports = { FoodTypes, Restaurants, Dishes, Users, DishReviews };
+module.exports = {
+	FoodTypes,
+	Restaurants,
+	Dishes,
+	Users,
+	DishReviews,
+	Location,
+};
