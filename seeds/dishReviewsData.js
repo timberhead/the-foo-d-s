@@ -1,3 +1,6 @@
+const { DishReviews } = require("../models");
+
+const dishReviewsData = 
 [
     {
         review: "This is the bomb!",
@@ -15,3 +18,7 @@
         user_id: "null"
     }
 ]
+
+const seedDishReviews = () => DishReviews.bulkCreate(dishReviewsData);
+
+module.exports = seedDishReviews;
