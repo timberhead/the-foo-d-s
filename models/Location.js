@@ -32,6 +32,14 @@ Location.init(
 				isAlpha: true,
 			},
 		},
+		zipcode: {
+			type: DataTypes.INTEGER,
+			allowNull: false,
+			validate: {
+				len: [5],
+				len: [9],
+			},
+		},
 		restaurant_id: {
 			type: DataTypes.INTEGER,
 			allowNull: false,
