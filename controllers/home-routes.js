@@ -85,7 +85,7 @@ router.get("/restaurant/:id", async (req, res) => {
 		const restaurant = restaurantData.get({ plain: true });
 		const dishes = dishData.map((dish) => dish.get({ plain: true }));
 
-		res.status(200).json({ restaurant, dishes });
+		// res.status(200).json({ restaurant, dishes });
 		res.render("restaurant", { restaurant, dishes });
 	} catch (err) {
 		res.status(500).json(err);
