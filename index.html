@@ -16,26 +16,31 @@
     </header>
     <nav>
       <a href="/">Home</a>
-      {{#if loggedIn}}
+      <!-- {{#if loggedIn}} -->
       <button id="logout" class="btn-no-style">Logout</button>
-      {{else}}
+      <!-- {{else}} -->
       <a href="/login">Login</a>
-      {{/if}}
-        <div class="container-fluid w-75 justify-content-center">
-            <form class="d-flex col-6" role="search" id="btn-submit">
-                <select class="form-select" id="genrePicker" aria-label="Default select example">
+      <!-- {{/if}} -->
+      <div class="container-fluid w-75 justify-content-center">
+        <form class="d-flex col-6" role="search" id="btn-submit">
+          <select
+            class="form-select"
+            id="genrePicker"
+            aria-label="Default select example"
+            style="padding: 4px; width: 450px"
+          >
             <option selected>Please select your restaurant type:</option>
-            <option value="35" id="35">American</option>
-            <option value="27" id="27">Asian</option>
-            <option value="10749" id="10749">Italian</option>
-            <option value="28" id="28">Mexican</option>
-            <option value="878" id="878">Random...</option>
+            <option value="1" id="1">American</option>
+            <option value="2" id="2">Asian</option>
+            <option value="3" id="3">Italian</option>
+            <option value="4" id="4">Mexican</option>
+            <option value="5" id="5">Random...</option>
           </select>
-            </form>
-        </div>
+        </form>
+      </div>
     </nav>
-    <main>
-      <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4">
+     <main>
+        <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4 w-100">
           <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
       <div class="row">
         <div class="col-md-4">
@@ -48,13 +53,30 @@
           <p class="card-text">${overview}</p> <button alt=${title} class="btn btn-outline-danger justify-content-flex-end" data-bs-target="#"
     data-bs-toggle="modal">Click here to view restaurant</button>
         </div>
-
+    </section>
+        <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4 w-100">
+          <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
+      <div class="row">
+        <div class="col-md-4">
+          <img src="${restaurant image
+          }" class="rounded-start" alt="${title}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">${title}</h5>
+          <p class="card-text">${overview}</p> <button alt=${title} class="btn btn-outline-danger justify-content-flex-end" data-bs-target="#"
+    data-bs-toggle="modal">Click here to view restaurant</button>
+        </div>
+    </section>
+      
+     
     </main>
-    {{#if loggedIn}}
-    <script src="/js/logout.js"></script>
-    {{/if}}
     <footer>
-      <h1>Made with ❤️ by fine folks at the-foo-d-s</h1>
-    </footer>
+        <h1>Made with ❤️ by fine folks at the-foo-d-s</h1>
+      </footer>
+       <script src="./assets/js/script.js"></script>
+      <!-- {{#if loggedIn}} -->
+      <script src="/js/logout.js"></script>
+      <!-- {{/if}} -->
   </body>
 </html>
