@@ -60,7 +60,7 @@ router.get("/restaurant/:id", async (req, res) => {
 				include: [
 					[
 						sequelize.literal(
-							`(SELECT AVG(dish_reviews.rating) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id JOIN restaurants ON dishes.restaurant_id = restaurants.id WHERE dishes.restaurant_id = restaurants.id)`
+							`(SELECT AVG(dish_reviews.rating) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id WHERE dishes.restaurant_id = ${req.params.id})`
 						),
 						"stars",
 					],
