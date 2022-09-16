@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { where } = require("sequelize");
 const sequelize = require("../config/connection");
 const { FoodTypes, Restaurants, Dishes, DishReviews } = require("../models");
 
@@ -17,13 +18,17 @@ router.get("/", async (req, res) => {
 
 router.get("/category/:id", async (req, res) => {
 	try {
-		const typeData = await FoodTypes.findByPk(req.params.id, {
+		// const typeData = await FoodTypes.findByPk(req.params.id, {});
+
+		const restaurantsData = await Restaurants.findAll({
+			where: { type_id: req.params.id },
+
 			include: [{ all: true, nested: true }],
 			attributes: {
 				include: [
 					[
 						sequelize.literal(
-							`SELECT AVG(dish_reviews.rating) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id JOIN restaurants ON dishes.restaurant_id = restaurants.id JOIN food_types ON restaurants.type_id = food_types.id WHERE dishes.restaurant_id = restaurants.id AND food_types.id = ${req.params.id}`
+							`(SELECT AVG(dish_reviews.rating) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id JOIN restaurants ON dishes.restaurant_id = restaurants.id JOIN food_types ON restaurants.type_id = food_types.id WHERE dishes.restaurant_id = restaurants.id AND food_types.id = ${req.params.id})`
 						),
 						"stars",
 					],
@@ -31,9 +36,12 @@ router.get("/category/:id", async (req, res) => {
 			},
 		});
 
-		const type = typeData.get({ plain: true });
+		console.log(restaurantsData, "restaurantsData");
+		// const type = typeData.get({ plain: true });
+		const restaurants = restaurantsData.get({ plain: true });
+		console.log(restaurants, "restaurants");
 
-		res.status(200).json(type);
+		res.status(200).json(restaurants);
 		// res.render("category", { type });
 	} catch (err) {
 		res.status(500).json(err);
