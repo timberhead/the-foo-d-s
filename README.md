@@ -27,7 +27,7 @@
 
  Resturant Rating App for Individual Meals.
 
- Our task is to create a simple application that allows a user to provide a review of their favorite meals at resturants that may not have received high ratings for their overall menus.  This application will act as a messageboard for promoting great meals at resturants that users may have overlooked because of the lower overall resturant rating.
+ Our task is to create a simple application that allows a user to provide a review of their favorite meals at restaurants that may not have received high ratings for their overall menus.  This application will act as a messageboard for promoting great meals at restaurants that users may have overlooked because of the lower overall restaurant rating.
 
  This application will use...........databases to provide updated user reviews.
 
@@ -41,11 +41,11 @@
 
 ## User Story
 
- AS an average Joe with a favorite meal at a hole in the wall resturant
+ AS an average Joe with a favorite meal at a hole in the wall restaurant
  <br/>
  I WANT to share my review with as many other people as possible
  <br/>
- SO THAT I can get the word out about this resturant and discover resturants with great meals from other users reviews
+ SO THAT I can get the word out about this resturant and discover restaurants with great meals from other users reviews
  <br/>
 
 ## Acceptance Criteria
@@ -66,15 +66,15 @@
  <br/>
  WHEN I click on the Category Selector button
  <br/>
- THEN I am presented with a list of resturants types
+ THEN I am presented with a list of restaurants types
  <br/>
  WHEN I click on a resturant type
  <br/>
  THEN I am presented with multiple cards, each representing a local resturant and an image of their signature meal
  <br/>
- WHEN I click on a resturant card
+ WHEN I click on a restaurant card
  <br/>
- THEN I am presented with the resturant's rating and number of reviews, and the meal's rating and number of reviews
+ THEN I am presented with the restaurant's rating and number of reviews, and the meal's rating and number of reviews
  <br/>
  WHEN I click on a specific meal
  <br/>
@@ -86,7 +86,7 @@
 
 ## Usage
 
-Once you've opened the webpage and are logged in, you can select types of local resturants from a list.  After you select a resturant type, you'll see a display of one or more resturants.  Each resturant will be displayed with its overall rating, and its best meal with its individual rating.  You can simply use the app to find highly rated meals at resturants that you would have overlooked, due to the resturants overall rating.  You can also add your own review of a resturants meal.  Your review will be added to the database to help other people find a great meal.    
+Once you've opened the webpage and are logged in, you can select types of local restaurants from a list.  After you select a resturant type, you'll see a display of one or more restaurants.  Each resturant will be displayed with its overall rating, and its best meal with its individual rating.  You can simply use the app to find highly rated meals at restaurants that you would have overlooked, due to the restaurants overall rating.  You can also add your own review of a restaurants meal.  Your review will be added to the database to help other people find a great meal. Now everyone can be a foo-d.   
 
 ## License
 
@@ -121,7 +121,7 @@ Tate Foster&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;github.com/tatefoster&nbsp;&nbsp;
 <br/>
 Charles Hargrave&nbsp;&nbsp;&nbsp;&emsp;github.com/chuckfee23&nbsp;&nbsp;&emsp;&emsp;&emsp;Charles.Hargrave.jr@gmail.com
 <br/>
-Kaelin Salazar&nbsp;&emsp;&emsp;&emsp;github.com/kaelinpsalazar&nbsp;&emsp;&emsp;kaelinpsalazar@gmail.com
+Kaelin Salazar&nbsp;&emsp;&emsp;&emsp;github.com/kaelinpsalazar&nbsp;&nbsp;&emsp;&emsp;kaelinpsalazar@gmail.com
 <br/>
 Christopher Boyle&nbsp;&nbsp;&emsp;github.com/timberhead&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;timberhead1121@gmail.com
 <br/>

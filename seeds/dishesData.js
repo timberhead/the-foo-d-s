@@ -2,26 +2,26 @@ const { Dishes } = require("../models");
 
 const dishesData = [
   {
-    price: 11.0,
-    name: "Breakfast Sandwich",
-    description: "Two eggs, Bacon, Tomato, Cheddar,Spicy Aioli, Challah Bun",
+    price: 16.0,
+    name: "Kung Pao Chicken",
+    description: "Chicken with vegetables in a spicy Kung Pao sauce",
     restaurant_id: 1,
   },
   {
     price: 15.0,
-    name: "Meatball Sandwich",
-    description: "Tomato Braised Meatballs, Pesto, Mozzarella",
+    name: "Szechuan Beef",
+    description: "Stir fried beef with vegetables",
+    restaurant_id: 1,
+  },
+  {
+    price: 15.0,
+    name: "Chicken Lo Mein",
+    description: "Noodles with chicken and vegetables",
     restaurant_id: 1,
   },
   {
     price: 13.0,
-    name: "Chicken & Pesto Sandwich",
-    description: "Basil Pesto, Mozzarella, Sweet Peppers",
-    restaurant_id: 1,
-  },
-  {
-    price: 13.0,
-    name: "Watermelon Heirloom Cherry Tomato Salad",
+    name: "Pork Dumplings",
     description:
       "Cucumber, Red Onion, Cotija, Mint, Chili-SUmac, Reduced Balsamic",
     restaurant_id: 2,

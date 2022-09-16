@@ -2,16 +2,52 @@ const { Restaurants } = require("../models");
 
 const restaurantsData = [
   {
-    name: "Brider",
+    name: "Spicy Asia",
     type_id: 1,
   },
   {
-    name: "The Bindery",
+    name: "Red Panda Cuisine",
+    type_id: 1,
+  },
+  {
+    name: "East Moon Express",
+    type_id: 1,
+  },
+  {
+    name: "Joe's Place",
     type_id: 2,
   },
   {
-    name: "Happy Camper",
+    name: "Lulu's Grill",
+    type_id: 2,
+  },
+  {
+    name: "Kate's Dinner",
+    type_id: 2,
+  },
+  {
+    name: "The Taco Shop",
     type_id: 3,
+  },
+  {
+    name: "Pablo's Taqueria",
+    type_id: 3,
+  },
+  {
+    name: "Abuelitas Mexican Grill",
+    type_id: 3,
+  },
+  {
+    name: "Incredible Italian",
+    type_id: 4,
+  },
+  {
+    name: "Mama's Kitchen",
+    type_id: 4,
+  },
+  {
+    name: "Cindy's Cafe",
+    type_id: 4,
   },
 ];
 
