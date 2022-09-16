@@ -11,7 +11,7 @@ const foodTypesData = [
     type: "Mexican",
   },
   {
-    type: "Pizza",
+    type: "Italian",
   },
 ];
 
