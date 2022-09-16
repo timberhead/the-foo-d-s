@@ -49,11 +49,6 @@ const restaurantsData = [
     name: "Cindy's Cafe",
     type_id: 4,
   },
-
-  
-
-  
-
 ];
 
 const seedRestaurants = () => Restaurants.bulkCreate(restaurantsData);

@@ -6,55 +6,55 @@ const DishReviews = require("./DishReviews");
 const Location = require("./Location");
 
 FoodTypes.hasMany(Restaurants, {
-	foreignKey: "type_id",
-	onDelete: "SET NULL",
+  foreignKey: "type_id",
+  onDelete: "SET NULL",
 });
 
 Restaurants.belongsTo(FoodTypes, {
-	foreignKey: "type_id",
+  foreignKey: "type_id",
 });
 
 Restaurants.hasOne(Location, {
-	foreignKey: "restaurant_id",
-	onDelete: "CASCADE",
+  foreignKey: "restaurant_id",
+  onDelete: "CASCADE",
 });
 
 Restaurants.hasMany(Dishes, {
-	foreignKey: "restaurant_id",
-	onDelete: "CASCADE",
+  foreignKey: "restaurant_id",
+  onDelete: "CASCADE",
 });
 
 Dishes.belongsTo(Restaurants, {
-	foreignKey: "restaurant_id",
+  foreignKey: "restaurant_id",
 });
 
 Dishes.hasMany(DishReviews, {
-	foreignKey: "dish_id",
-	onDelete: "CASCADE",
+  foreignKey: "dish_id",
+  onDelete: "CASCADE",
 });
 
 Location.belongsTo(Restaurants, {
-	foreignKey: "restaurant_id",
+  foreignKey: "restaurant_id",
 });
 
 Users.hasMany(DishReviews, {
-	foreignKey: "user_id",
-	onDelete: "SET NULL",
+  foreignKey: "user_id",
+  onDelete: "SET NULL",
 });
 
 DishReviews.belongsTo(Dishes, {
-	foreignKey: "dish_id",
+  foreignKey: "dish_id",
 });
 
 DishReviews.belongsTo(Users, {
-	foreignKey: "user_id",
+  foreignKey: "user_id",
 });
 
 module.exports = {
-	FoodTypes,
-	Restaurants,
-	Dishes,
-	Users,
-	DishReviews,
-	Location,
+  FoodTypes,
+  Restaurants,
+  Dishes,
+  Users,
+  DishReviews,
+  Location,
 };
