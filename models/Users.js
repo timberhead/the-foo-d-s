@@ -1,4 +1,5 @@
 const { Model, DataTypes, UUID } = require("sequelize");
+const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class Users extends Model {
@@ -42,6 +43,19 @@ Users.init(
 		hooks: {
 			async beforeCreate(newUserData) {
 				newUserData.password = await bcrypt.hash(newUserData.password, 12);
+				return newUserData;
+			},
+			async beforeUpdate(updateUserData) {
+				updateUserData.password = await bcrypt.hash(
+					updateUserData.password,
+					12
+				);
+				return updateUserData;
+			},
+			async beforeBulkCreate(newUserData) {
+				for (const user of newUserData) {
+					user.password = await bcrypt.hash(user.password, 12);
+				}
 				return newUserData;
 			},
 		},
