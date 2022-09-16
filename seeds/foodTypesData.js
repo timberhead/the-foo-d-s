@@ -8,7 +8,7 @@ const foodTypesData = [
     type: "American",
   },
   {
-    type: "New American",
+    type: "Mexican",
   },
   {
     type: "Pizza",
