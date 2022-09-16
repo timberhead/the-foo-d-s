@@ -33,7 +33,7 @@ router.get("/category/:id", async (req, res) => {
 				include: [
 					[
 						sequelize.literal(
-							`(SELECT AVG(dish_reviews.rating) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id JOIN restaurants ON dishes.restaurant_id = restaurants.id WHERE dishes.restaurant_id = restaurants.id)`
+							`(SELECT AVG(dish_reviews.rating) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id WHERE dishes.restaurant_id = restaurants.id)`
 						),
 						"stars",
 					],
@@ -46,8 +46,8 @@ router.get("/category/:id", async (req, res) => {
 			restaurant.get({ plain: true })
 		);
 
-		// res.status(200).json({ type, restaurants });
-		res.render("category", { type, restaurants });
+		res.status(200).json({ type, restaurants });
+		// res.render("category", { type, restaurants });
 	} catch (err) {
 		res.status(500).json(err);
 	}
@@ -85,8 +85,8 @@ router.get("/restaurant/:id", async (req, res) => {
 		const restaurant = restaurantData.get({ plain: true });
 		const dishes = dishData.map((dish) => dish.get({ plain: true }));
 
-		// res.status(200).json({ restaurant, dishes });
-		res.render("restaurant", { restaurant, dishes });
+		res.status(200).json({ restaurant, dishes });
+		// res.render("restaurant", { restaurant, dishes });
 	} catch (err) {
 		res.status(500).json(err);
 	}
@@ -109,8 +109,8 @@ router.get("/dish/:id", async (req, res) => {
 		});
 
 		const dish = dishData.get({ plain: true });
-		// res.status(200).json(dish);
-		res.render("dish", dish);
+		res.status(200).json(dish);
+		// res.render("dish", {dish});
 	} catch (err) {
 		res.status(500).json(err);
 	}
