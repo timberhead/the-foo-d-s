@@ -57,13 +57,13 @@ const dishReviewsData = [
   },
   {
     rating: 5,
-    review: "Best breakfast sando in town!",
+    review: "Best kung pao in town!",
     dish_id: 1,
     user_id: null,
   },
   {
-    rating: 1,
-    review: "Best meatball sandwich in the world!!!",
+    rating: 4,
+    review: "So tasty!",
     dish_id: 2,
     user_id: null,
   },
@@ -75,7 +75,7 @@ const dishReviewsData = [
   },
   {
     rating: 5,
-    review: "The pesto was so fresh!",
+    review: "So fresh!",
     dish_id: 4,
     user_id: null,
   },
@@ -117,7 +117,7 @@ const dishReviewsData = [
   },
   {
     rating: 5,
-    review: "That's a spicy meatball!",
+    review: "Delicious!",
     dish_id: 2,
     user_id: null,
   },
@@ -154,7 +154,7 @@ const dishReviewsData = [
   },
   {
     rating: 3,
-    review: "Was hoping the chicken would be crispier",
+    review: "Was hoping it would be better...",
     dish_id: 8,
     user_id: null,
   },
@@ -172,7 +172,7 @@ const dishReviewsData = [
   },
   {
     rating: 1,
-    review: "Best meatball sandwich in the world!!!",
+    review: "So good!",
     dish_id: 2,
     user_id: null,
   },
@@ -208,7 +208,7 @@ const dishReviewsData = [
   },
   {
     rating: 5,
-    review: "Get it with the mustard vinaigrette! So good!",
+    review: "o good!",
     dish_id: 8,
     user_id: null,
   },
@@ -274,13 +274,13 @@ const dishReviewsData = [
   },
   {
     rating: 5,
-    review: "Best breakfast sando in town!",
+    review: "Best in town!",
     dish_id: 1,
     user_id: null,
   },
   {
-    rating: 1,
-    review: "Best meatball sandwich in the world!!!",
+    rating: 5,
+    review: "Best in the world!!!",
     dish_id: 2,
     user_id: null,
   },
@@ -292,7 +292,7 @@ const dishReviewsData = [
   },
   {
     rating: 5,
-    review: "The pesto was so fresh!",
+    review: "Was so fresh!",
     dish_id: 4,
     user_id: null,
   },
@@ -334,7 +334,7 @@ const dishReviewsData = [
   },
   {
     rating: 5,
-    review: "That's a spicy meatball!",
+    review: "That's some tasty stuff!",
     dish_id: 2,
     user_id: null,
   },
@@ -371,13 +371,13 @@ const dishReviewsData = [
   },
   {
     rating: 3,
-    review: "Was hoping the chicken would be crispier",
+    review: "Was hoping for more..",
     dish_id: 8,
     user_id: null,
   },
   {
     rating: 2,
-    review: "Amazing!",
+    review: "Eh.",
     dish_id: 9,
     user_id: null,
   },

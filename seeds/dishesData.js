@@ -22,40 +22,38 @@ const dishesData = [
   {
     price: 13.0,
     name: "Pork Dumplings",
-    description:
-      "Cucumber, Red Onion, Cotija, Mint, Chili-SUmac, Reduced Balsamic",
+    description: "Pork dumplings, steamed or fried.",
     restaurant_id: 2,
   },
   {
     price: 17.0,
-    name: "Albacore Tuna Melt",
-    description: "Sourdough, Fennel Capers, Red Onion, Tomato, Cheddar",
+    name: "Fried Rice",
+    description: "Choice of pork, chicken, or vegetarian.",
     restaurant_id: 2,
   },
   {
-    price: 32.0,
-    name: "Sicilian Swordfish Steak",
-    description:
-      "Israeli Couscous, Black Olives, Capers, Preserved Lemon, Pine Nuts, Sultanas, Mint",
+    price: 18,
+    name: "Sesame Chicken",
+    description: "Chicken tossed in a spicy sesame sauce.",
     restaurant_id: 2,
   },
   {
-    price: 13.0,
-    name: "Meat Calzone",
-    description: "Pepperoni, Canadian Bacon, Mozzarella/Provolone & Marinara",
+    price: 15.0,
+    name: "Pad See Ew",
+    description: "Flat noodles tossed with broccoli in delightful sauce.",
     restaurant_id: 3,
   },
   {
     price: 16.0,
-    name: "Crispy Chicken Salad",
-    description:
-      "Iceberg, Crispy Chicken, Pico de Gallo, Corn, Cheddar Cheese, Avocado, Tortilla Strips & Chipotle Dressing",
+    name: "Pad Kee Mao",
+    description: "Flat noodles tossed with vegetables with a spicy soy sauce.",
     restaurant_id: 3,
   },
   {
     price: 20.0,
-    name: "Pepperoni Meat'Za",
-    description: "Pepperoni & Marinara",
+    name: "Yellow Curry",
+    description:
+      "Vegetables, potatoes, cooked in a yellow coconut curry sauce.",
     restaurant_id: 3,
   },
   {
