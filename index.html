@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fair Fare</title>
+    <link rel="stylesheet" type="text/css" href="public/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+    <link href="/dist/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Fair Fare</h1>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      <!-- {{#if loggedIn}} -->
+      <button id="logout" class="btn-no-style">Logout</button>
+      <!-- {{else}} -->
+      <a href="/login">Login</a>
+      <!-- {{/if}} -->
+      <div class="container-fluid w-75 justify-content-center">
+        <form class="d-flex col-6" role="search" id="btn-submit">
+          <select
+            class="form-select"
+            id="genrePicker"
+            aria-label="Default select example"
+            style="padding: 4px; width: 450px"
+          >
+            <option selected>Please select your restaurant type:</option>
+            <option value="1" id="1">American</option>
+            <option value="2" id="2">Asian</option>
+            <option value="3" id="3">Italian</option>
+            <option value="4" id="4">Mexican</option>
+            <option value="5" id="5">Random...</option>
+          </select>
+        </form>
+      </div>
+    </nav>
+     <main>
+        <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4 w-100">
+          <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="./public/img/italian-food-2.jpg" class="rounded-start" alt="Button to view restaurant.">
+      </div>
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">Restaurant #2's food.</h5>
+          <p class="card-text">Rating goes here **</p> <button alt=${title} class="btn btn-outline-danger justify-content-flex-end" data-bs-target="#"
+    data-bs-toggle="modal">Click here to view restaurant</button>
+        </div>
+    </section>
+        <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4 w-100">
+          <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="./public/img/american-food-1.jpg" class="rounded-start" alt="An image of some food.">
+      </div>
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">Restaurant #1's Hamburger.</h5>
+          <p class="card-text">Rating goes here ***</p> <button alt=${title} class="btn btn-outline-danger justify-content-space around" data-bs-target="#"
+    data-bs-toggle="modal">Click here to view restaurant</button>
+        </div>
+    </section>
+    <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4 w-100">
+          <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="./public/img/asian-food-3.jpg" class="rounded-start" alt="${title}">
+      </div>
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">Restaurant #2's food.</h5>
+          <p class="card-text">Rating goes here **</p> <button alt=${title} class="btn btn-outline-danger justify-content-flex-end" data-bs-target="#"
+    data-bs-toggle="modal">Click here to view restaurant</button>
+        </div>
+    </section>
+      <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4 w-100">
+          <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
+      <div class="row">
+        <div class="col-md-12">
+          <img src="./public/img/mexican-food-1.jpg" class="rounded-start" alt="An image of some food.">
+      </div>
+      <div class="col-md-12">
+        <div class="card-body">
+          <h5 class="card-title">Restaurant #1's Tacos.</h5>
+          <p class="card-text">Rating goes here ***</p> <button alt=${title} class="btn btn-outline-danger justify-content-space around" data-bs-target="#"
+    data-bs-toggle="modal">Click here to view restaurant</button>
+        </div>
+    </section>
+     
+    </main>
+    <footer>
+        <h1>Made with ❤️ by fine folks at the-foo-d-s</h1>
+      </footer>
+       <script src="./assets/js/script.js"></script>
+      <!-- {{#if loggedIn}} -->
+      <script src="/js/logout.js"></script>
+      <!-- {{/if}} -->
+  </body>
+</html>
