@@ -29,7 +29,7 @@
 
  Our task is to create a simple application that allows a user to provide a review of their favorite meals at restaurants that may not have received high ratings for their overall menus.  This application will act as a messageboard for promoting great meals at restaurants that users may have overlooked because of the lower overall restaurant rating.
 
- This application will use...........databases to provide updated user reviews.
+ This application will use custom API databases to provide updated user reviews.
 
 ## Installation
 
@@ -76,6 +76,10 @@
  <br/>
  THEN I am presented with the restaurant's rating and number of reviews, and the meal's rating and number of reviews
  <br/>
+ WHEN I click on a specific meal, and I haven't logged in
+ <br/>
+ THEN I am directed back to the Login/Register form
+ <br/> 
  WHEN I click on a specific meal
  <br/>
  THEN I am presented with a form to add my own review for that meal
@@ -86,7 +90,7 @@
 
 ## Usage
 
-Once you've opened the webpage and are logged in, you can select types of local restaurants from a list.  After you select a resturant type, you'll see a display of one or more restaurants.  Each resturant will be displayed with its overall rating, and its best meal with its individual rating.  You can simply use the app to find highly rated meals at restaurants that you would have overlooked, due to the restaurants overall rating.  You can also add your own review of a restaurants meal.  Your review will be added to the database to help other people find a great meal. Now everyone can be a foo-d.   
+Once you've opened the webpage and are logged in, you can select types of local restaurants from a list.  After you select a resturant type, you'll see a display of one or more restaurants.  Each resturant will be displayed with its overall rating, and its best meal with its individual rating.  You can simply use the app to find highly rated meals at restaurants that you would have overlooked, due to the restaurants overall rating.  You can also add your own review of a restaurants meal.  Your review will be added to the database to help other people find a great meal. Now everyone can be a foo-dee.   
 
 ## License
 
@@ -110,7 +114,10 @@ This application is covered by the Apache license.
 
 ## Deployed Links:
 
-Github.......Google Slides........Etc...........
+Heroku git URL:  https://git.heroku.com/the-foo-d-s.git 
+
+<img src="./public/img/the-fair-fare.jpeg" alt="glorious cheeseburger" width="500"/>
+
 ## Credits
 
 Sophie Lebron&emsp;&emsp;&emsp;github.com/sclebron&emsp;&emsp;&emsp;&emsp;&emsp;sophieclebron@gmail.com
