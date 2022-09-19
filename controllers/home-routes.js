@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 		const types = typeData.map((type) => type.get({ plain: true }));
 
 		// res.status(200).json(types);
-		res.render("homepage", { types });
+		res.render("homepage", { types, loggedIn: req.session.loggedIn });
 	} catch (err) {
 		res.status(500).json(err);
 	}
@@ -46,8 +46,12 @@ router.get("/category/:id", async (req, res) => {
 			restaurant.get({ plain: true })
 		);
 
-		res.status(200).json({ type, restaurants });
-		// res.render("category", { type, restaurants });
+		// res.status(200).json({ type, restaurants });
+		res.render("category", {
+			type,
+			restaurants,
+			loggedIn: req.session.loggedIn,
+		});
 	} catch (err) {
 		res.status(500).json(err);
 	}
@@ -85,8 +89,12 @@ router.get("/restaurant/:id", async (req, res) => {
 		const restaurant = restaurantData.get({ plain: true });
 		const dishes = dishData.map((dish) => dish.get({ plain: true }));
 
-		res.status(200).json({ restaurant, dishes });
-		// res.render("restaurant", { restaurant, dishes });
+		// res.status(200).json({ restaurant, dishes });
+		res.render("restaurant", {
+			restaurant,
+			dishes,
+			loggedIn: req.session.loggedIn,
+		});
 	} catch (err) {
 		res.status(500).json(err);
 	}
@@ -109,8 +117,8 @@ router.get("/dish/:id", async (req, res) => {
 		});
 
 		const dish = dishData.get({ plain: true });
-		res.status(200).json(dish);
-		// res.render("dish", {dish});
+		// res.status(200).json(dish);
+		res.render("reviews", { dish, loggedIn: req.session.loggedIn });
 	} catch (err) {
 		res.status(500).json(err);
 	}

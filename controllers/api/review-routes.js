@@ -27,8 +27,8 @@ router.put("/:id", withAuth, async (req, res) => {
 		});
 
 		if (affectedRows > 0) {
-			res.status(200).end();
-			// res.redirect(`/dish/${req.body.dish_id}`);
+			// res.status(200).end();
+			res.redirect(`/dish/${req.body.dish_id}`);
 		} else {
 			res.status(404).end();
 		}
@@ -46,8 +46,8 @@ router.delete("/:id", withAuth, (req, res) => {
 		});
 
 		if (affectedRows > 0) {
-			res.status(200).end();
-			// res.redirect(`/dish/${req.body.dish_id}`);
+			// res.status(200).end();
+			res.redirect(`/dish/${req.body.dish_id}`);
 		} else {
 			res.status(404).end();
 		}
