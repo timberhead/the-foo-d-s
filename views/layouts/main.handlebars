@@ -7,7 +7,7 @@
     <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/css/jass.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    {{!-- <link href="/dist/style.css" rel="stylesheet" /> --}}
+    {{! <link href="/dist/style.css" rel="stylesheet" /> }}
     <title>Fair Fare</title>
   </head>
 
@@ -23,13 +23,19 @@
       {{else}}
         <a href="/login">Login</a>
       {{/if}}
-      
+
     </nav>
     <main>
+
     </main>
+
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
     {{{body}}}
+    <footer>
+      <h1>Made with ❤️ by fine folks at the-foo-d-s</h1>
+    </footer>
+    <script src=".../assets/script.js"></script>
   </body>
 </html>
