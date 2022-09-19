@@ -19,6 +19,9 @@ Dishes.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		image_file: {
+			type: DataTypes.STRING,
+		},
 		description: {
 			type: DataTypes.STRING,
 		},
