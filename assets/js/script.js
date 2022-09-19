@@ -28,7 +28,7 @@ function getRestaurants() {
       introPage.hide();
     });
 }
-//create a function to show movie info
+//create a function to show restaurant info
 function showRestaurant(data) {
   cardholder.innerHTML = "";
   console.log(data.results);
@@ -40,10 +40,10 @@ function showRestaurant(data) {
     <section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4">
           <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-12">
           <img src="${restaurant_image}" class="rounded-start" alt="${title}">
       </div>
-      <div class="col-md-8">
+      <div class="col-md-12">
         <div class="card-body">
           <h5 class="card-title">${title}</h5>
           <p class="card-text">${overview}</p> <button alt=${title} class="btn btn-outline-danger justify-content-flex-end" data-bs-target="#"
@@ -85,5 +85,5 @@ submitBtn.on("click", function (event) {
 });
 //--------------------------
 
-navSelector.on("change", getRestaurants);
+navSelector.on("change", showRestaurant);
 //--------------------------
