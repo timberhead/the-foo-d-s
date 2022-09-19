@@ -1,11 +1,10 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-
-  </body>
-</html>
+<section class="dish card">
+      <header>{{dish.name}} Rated: {{dish.stars}}/5</header>
+    <img src="/img/{{dish.image_file}}" alt="{{dish.description}}" />
+    <p>Description: {{dish.description}}</p>
+</section>
+    {{#each dish.dish_reviews as  |review|}}
+    {{> review-details}}
+    {{/each}}
+  <button class="btn btn-primary" type="">Add Review!</button>
+    
