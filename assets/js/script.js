@@ -60,7 +60,7 @@ reviewModal.hide();
 
 //-----------------------------
 //create a function to generate a modal containing a review form
-function reviewModal() {
+function getReviewModal() {
   //---------------------------
   $("#reviewModal").show;
   $("reviewModal").click(function () {});
