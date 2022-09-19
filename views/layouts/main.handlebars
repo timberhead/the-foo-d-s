@@ -7,7 +7,7 @@
     <link rel="shortcut icon" type="image/jpg" href="/img/favicon.ico" />
     <link rel="stylesheet" type="text/css" href="/css/jass.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    {{!-- <link href="/dist/style.css" rel="stylesheet" /> --}}
+    {{! <link href="/dist/style.css" rel="stylesheet" /> }}
     <title>Fair Fare</title>
   </head>
 
@@ -23,35 +23,19 @@
       {{else}}
         <a href="/login">Login</a>
       {{/if}}
-      
+
     </nav>
     <main>
-      <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="min-height: 285px; width:575px; padding:4px">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content bg-light">
-                    <div class="modal-body d-flex justify-content-end">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">x</button>
-                        <form class="form login-form">
-          <div class="form-group">
-            <label for="user-review">Pleave your review below:</label>
-            <input class="form-input" type="text" id="user-review" />
-            <button>Submit</button>
-          </div>
-                    </div>
-                    <div class="modal-body d-flex"></div>
-                </div>
-            </div>
-        </div>
-        
+
     </main>
-    <footer>
-        <h1>Made with ❤️ by fine folks at the-foo-d-s</h1>
-      </footer>
+
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
     {{{body}}}
-  
-  <script src=".../assets/script.js"></script>
+    <footer>
+      <h1>Made with ❤️ by fine folks at the-foo-d-s</h1>
+    </footer>
+    <script src=".../assets/script.js"></script>
   </body>
 </html>

@@ -1,32 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fair Fare</title>
-    <link rel="stylesheet" type="text/css" href="./css/jass.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <!-- <link href="./dist/style.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
   </head>
   <body>
-         
-    <!-- Modal -->
-        <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="min-height: 285px; width:575px; padding:4px">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content bg-light">
-                    <div class="modal-body d-flex justify-content-end">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">x</button>
-                        <form class="form login-form">
-          <div class="form-group">
-            <label for="user-review">Pleave your review below:</label>
-            <input class="form-input" type="text" id="user-review" />
-            <button>Submit</button>
-          </div>
-                    </div>
-                    <div class="modal-body d-flex"></div>
-                </div>
-            </div>
+    <nav
+      role="navagation"
+      class="flex justify-between items-centered h-16 bg-gradient-to-r from-blue-700 to-blue-500 text-white relative"
+    >
+      <a href="index.html" class="pl-6">The Fair Fare</a>
+      <div class="px-4 cursor-pointer md:hidden lg:hidden" id="bars">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </div>
+      <div class="hidden md:block" id="menu">
+        <a href="/" class="p-4">Home Page</a>
+        <a href="login.html" class="p-4">Login Page</a>
+        <a href="category.html" class="p-4">Categories Page</a>
+        <a href="restaurant.html" class="p-4">Restaurant Page</a>
+        <a href="/api/review" class="p-4">Reviews Page</a>
+      </div>
+    </nav>
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div class="relative inline-block text-center">
+      <div>
+        <button
+          type="button"
+          class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-blue-600 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-blue-600"
+          id="menu-button"
+          aria-expanded="true"
+          aria-haspopup="true"
+        >
+          Category Selector
+          <!-- Heroicon name: mini/chevron-down -->
+          <svg
+            class="-mr-1 ml-2 h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+      <!--OPTION #1-->
+      <!--If the button on the Category selector is clicked, show the menu div.-->
+      <!--The menu div has classes assciated with based on the state of the category selector button-->
+      <!--If the button is a boolean, true would give the menu a shown status, and the false would hide it. -->
+      <!--OPTION #2-->
+      <!--When the button is clicked, it checks the menu div for the hidden class attribute. If it is there, it removes it. If it isn't there, add it.-->
+      <!-- Dropdown menu, show/hide based on menu state.
+ 
+      Entering: "transition ease-out duration-100"
+        From: "transform opacity-0 scale-95"
+        To: "transform opacity-100 scale-100"
+      Leaving: "transition ease-in duration-75"
+        From: "transform opacity-100 scale-100"
+        To: "transform opacity-0 scale-95" -->
+      <div
+        id="dropdown-menu"
+        class="hidden justify-items-center z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="menu-button"
+        tabindex="-1"
+      >
+        <div id="dropdown-options" class="py-1" role="none">
+          <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+          <a
+            href="/api/restaurant/asian"
+            class="text-blue-600 block px-4 py-2 text-sm"
+            role="menuitem"
+            tabindex="-1"
+            id="Asian"
+            >Asian</a
+          >
+          <a
+            href="#"
+            class="text-blue-600 block px-4 py-2 text-sm"
+            role="menuitem"
+            tabindex="-1"
+            id="American"
+            >American</a
+          >
+          <a
+            href="#"
+            class="text-blue-600 block px-4 py-2 text-sm"
+            role="menuitem"
+            tabindex="-1"
+            id="Mexican"
+            >Mexican</a
+          >
+          <a
+            href="#"
+            class="text-blue-600 block px-4 py-2 text-sm"
+            role="menuitem"
+            tabindex="-1"
+            id="Italian"
+            >Italian</a
+          >
+          <form method="POST" action="#" role="none">
+            <button
+              type="submit"
+              class="text-gray-700 block w-full px-4 py-2 text-left text-sm"
+              role="menuitem"
+              tabindex="-1"
+              id="menu-item-3"
+            ></button>
+          </form>
         </div>
-    <!-- <script src="./js/login.js"></script> -->
+      </div>
+    </div>
+    <div
+      class="bg-no-repeat h-screen bg-center bg-cover center"
+      style="background-image: url('images/img.american-food-1.jpg')"
+    >
+      <div class="text-center justify-center items-center font-bold">
+        <h1
+          class="lg:text-9xl sm:text-6xl text-4xl mb-10 text-blue-600 hover:text-white duration-300"
+        >
+          The Fair Fare
+        </h1>
+        <a
+          href="#"
+          class="text-blue-600 text-xl flex justify-center items-center transform hover:scale-110 duration-300"
+          >a plate that doesn't suck</a
+        >
+      </div>
+    </div>
+    <footer
+      class="text-blue-600 text-center justify-center items-center transform hover:scale-150 duration-300"
+    >
+      Made with :heart: by the foo-d-s
+    </footer>
+    <script src="app.js"></script>
   </body>
 </html>
