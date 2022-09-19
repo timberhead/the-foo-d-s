@@ -14,6 +14,7 @@ router.post("/", withAuth, async (req, res) => {
 		// res.status(200).json(newReview);
 		res.redirect(`/dish/${req.body.dish_id}`);
 	} catch (err) {
+		console.log(err);
 		res.status(500).json(err);
 	}
 });
