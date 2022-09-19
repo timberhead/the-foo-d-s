@@ -1,16 +1,11 @@
-<section id="cardholder" class="row justify-content-center row-cols-lg-2 row-cols-md-1 g-4 w-100">
-          <div class="card justify-content-center" style="min-height: 285px; width:575px; padding:4px">
-      <div class="row">
-        <div class="col-md-12">
-         <img src="/images/{{tbd}}" alt="{{tbd}}" class="restaurant rounded-start" alt="Button to view restaurant.">
-      </div>
-      <div class="col-md-12">
-        <div class="card-body">
-          <h5 class="card-title">Restaurant #2's food.</h5>
-          <p class="card-text">Rating goes here **</p> <button alt=${title} class="btn btn-outline-danger justify-content-flex-end" data-bs-target="#"
-    data-bs-toggle="modal">Click here to view restaurant</button>
-        </div>
-          {{#each dishes as |dish|}}
+<section class="restaurant">
+  <img src="/images/{{tbd}}" alt="{{tbd}}" />
+  <div class="card">
+    <h3>{{restaurant.name}} Overall Rating: {{restaurant.stars}}</h3>
+    <p> {{restaurant.location.street_address}}</p>
+    <p> {{restaurant.location.city}}, {{restaurant.location.state}}, {{restaurant.location.zipcode}}</p>
+  </div>
+  {{#each dishes as |dish|}}
 {{> restaurant-details}}
 {{/each}}
     </section>

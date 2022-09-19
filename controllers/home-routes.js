@@ -60,11 +60,12 @@ router.get("/category/:id", async (req, res) => {
 router.get("/restaurant/:id", async (req, res) => {
   try {
     const restaurantData = await Restaurants.findByPk(req.params.id, {
+      include: [{ model: Location }],
       attributes: {
         include: [
           [
             sequelize.literal(
-              `(SELECT AVG(dish_reviews.rating) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id WHERE dishes.restaurant_id = ${req.params.id})`
+              `(SELECT ROUND(AVG(dish_reviews.rating), 1) FROM dish_reviews JOIN dishes ON dish_reviews.dish_id = dishes.id WHERE dishes.restaurant_id = ${req.params.id})`
             ),
             "stars",
           ],
@@ -78,7 +79,7 @@ router.get("/restaurant/:id", async (req, res) => {
         include: [
           [
             sequelize.literal(
-              `(SELECT AVG(dish_reviews.rating) FROM dish_reviews WHERE dish_reviews.dish_id = dishes.id)`
+              `(SELECT ROUND(AVG(dish_reviews.rating), 1) FROM dish_reviews WHERE dish_reviews.dish_id = dishes.id)`
             ),
             "stars",
           ],
@@ -108,7 +109,7 @@ router.get("/dish/:id", async (req, res) => {
         include: [
           [
             sequelize.literal(
-              `(SELECT AVG(dish_reviews.rating) FROM dish_reviews WHERE dish_reviews.dish_id = dishes.id)`
+              `(SELECT ROUND(AVG(dish_reviews.rating), 1) FROM dish_reviews WHERE dish_reviews.dish_id = dishes.id)`
             ),
             "stars",
           ],
@@ -118,7 +119,11 @@ router.get("/dish/:id", async (req, res) => {
 
     const dish = dishData.get({ plain: true });
     // res.status(200).json(dish);
-    res.render("reviews", { dish, loggedIn: req.session.loggedIn });
+    res.render("reviews", {
+      dish,
+      loggedIn: req.session.loggedIn,
+      userId: req.session.userId,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
