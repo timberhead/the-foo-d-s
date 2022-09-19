@@ -1,8 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --primary: #3d5852;
-  --secondary: #86938f;
-  --tertiary: #5e877f;
-  --quatrinary: #6c6b67;
+  --primary: #1dc1f8;
+  --secondary: #b9e2e8;
+  --tertiary: #41e938;
+  --quatrinary: #ddc877;
   --light: #e3e4e3;
   --dark: #182c23;
   --error: rgb(228, 46, 1);
@@ -29,7 +33,15 @@ a:visited {
 }
 
 header {
-  padding: 40px;
+  padding: 10px;
+  text-align: center;
+  background: var(--primary);
+  color: var(--light);
+}
+
+footer {
+  padding: 2px;
+  font-size: small;
   text-align: center;
   background: var(--primary);
   color: var(--light);
@@ -52,6 +64,7 @@ aside {
 nav {
   display: flex;
   background-color: var(--secondary);
+  justify-content: flex-end;
 }
 
 nav a {
@@ -66,7 +79,11 @@ nav a:hover {
   background-color: var(--dark);
 }
 
-.gallery {
+#genrePicker:hover {
+  cursor: pointer;
+}
+
+.restaurants {
   flex: 4;
   background-color: #fff;
   padding: 50px;
@@ -87,19 +104,23 @@ nav a:hover {
   margin-left: 16px;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
-.painting {
+.dish {
   width: 50%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
 }
 
-.painting-details {
+.dish-details {
   text-align: center;
   padding: 10px 20px;
   font-weight: bold;
@@ -124,7 +145,7 @@ img {
   border-radius: var(--border-radius);
   border-style: double;
   border-width: thick;
-  background-color: #577a7c;
+  background-color: #c6e29a;
   color: var(--light);
 }
 
@@ -144,7 +165,7 @@ img {
   font-weight: bold;
 }
 
-.gallery-name {
+.restaurant-name {
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 2px 2px 5px var(--secondary);
@@ -153,6 +174,17 @@ img {
   padding-bottom: 30px;
   padding-right: 100px;
   padding-left: 100px;
+}
+
+.styled-select {
+  width: 100px;
+  height: 17px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  background: url(images/downarrow_blue.png) no-repeat right white;
+  border: 2px double red;
+  display: inline-block;
+  position: relative;
 }
 
 /* LAYOUT */

@@ -1,11 +1,37 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
+<section class="dish card">
+      <header>{{dish.name}} Rated: {{dish.stars}}/5</header>
+    <img src="/img/{{dish.image_file}}" alt="{{dish.description}}" />
+    <p>Description: {{dish.description}}</p>
+</section>
+    {{#each dish.dish_reviews as  |review|}}
+    {{> review-details}}
+    {{/each}}
+            <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="min-height: 285px; width:575px; padding:4px">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content bg-light">
+                    <div class="modal-body d-flex justify-content-end">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">x</button>
+                        <form class="form login-form" action = "/api/reviews" method="post">
+          <div class="form-group">
+            <label for="user-review">Please leave your review below:</label>
+            Rating:
+             <select id="rating" name = "rating"
+            class="form-select">
+            <option value="1"> 1 </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 </option>
+            </select>/5
+            <input class="form-input" type="text" name= "review" id="user-review" />
+            <input type="hidden" name="dish_id" value="{{dish.id}}" />
+            <button class = "review" type="submit">Submit</button>
 
-  </body>
-</html>
+          </div>
+                    </div>
+                    <div class="modal-body d-flex"></div>
+                </div>
+            </div>
+        </div>
+
+        {{!-- <script src="/js/addReview.js"></script> --}}

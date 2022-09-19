@@ -1,8 +1,11 @@
 <section class="restaurant">
   <img src="/images/{{tbd}}" alt="{{tbd}}" />
-  <div class="tbd">
-    <h3>{{tbd}}</h3>
-    <p> {{tbd}}</p>
-    <p> {{tbd}}</p>
+  <div class="card">
+    <h3>{{restaurant.name}} Overall Rating: {{restaurant.stars}}</h3>
+    <p> {{restaurant.location.street_address}}</p>
+    <p> {{restaurant.location.city}}, {{restaurant.location.state}}, {{restaurant.location.zipcode}}</p>
   </div>
-</section>
+  {{#each dishes as |dish|}}
+{{> restaurant-details}}
+{{/each}}
+    </section>
