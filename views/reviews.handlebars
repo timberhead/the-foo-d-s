@@ -28,13 +28,14 @@
     <img src="/img/{{dish.image_file}}" alt="{{dish.description}}" />
     <p>Description: {{dish.description}}</p>
 </section> --}}
+{{#if loggedIn}}
             <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="min-height: 285px; width:575px; padding:4px">
             <div class="modal-dialog modal-xl">
                 <div class="modal-content bg-blue">
                     <div class="modal-body d-flex justify-content-end">
                         <form class="form login-form" action = "/api/reviews" method="post">
           <div class="form-group">
-            <label for="user-review">Please login to leave your review below:</label>
+            <label for="user-review">Please leave your review below:</label>
              <select id="rating" name = "rating"
             class="form-select text-center rounded-md"
             style="padding: 4px; width: 200px ">
@@ -61,4 +62,12 @@
         </div>
 
     </section>
+    {{else}}
+                <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="min-height: 285px; width:575px; padding:4px">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content bg-blue">
+                    <div class="modal-body d-flex justify-content-end">
+                        <p>Please login to leave your review!</p>
+    {{/if}}
+
         {{!-- <script src="/js/addReview.js"></script> --}}
