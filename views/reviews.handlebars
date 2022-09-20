@@ -1,37 +1,64 @@
-<section class="dish card">
+
+<section class="">
+<section class="text-4xl title-2 my-3 text-center font-mono">{{dish.name}}</section>
+    <section class=" mb-6 flex flex-row justify-evenly">            
+        <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                <img class="rounded-t-lg mx-auto max-w-full h-100" src="/img/{{dish.image_file}}" alt="{{dish.description}}">
+            <div class="p-5">
+<div class="flex items-center">
+    <svg aria-hidden="true" class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Rating star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+    <p class="pt-3 ml-2 text-base font-bold text-gray-900 dark:text-white">{{dish.stars}}</p>
+</div>
+<p>Price: ${{dish.price}}</p>
+<p>Description: {{dish.description}}</p>
+            </div>
+        </div>
+
+<div class="pt-2 bg-border-8 rounded-md w-full md:w-3/4 max-w-sm overflow-y-auto h-50 bg-white inline-block text-2xl text-center"> Reviews:
+    <article class="bg-border-8">
+        {{#each dish.dish_reviews as  |review|}}
+        {{> review-details}}
+        {{/each}}
+
+    </article>
+</div>
+
+{{!-- <section class="dish card">
       <header>{{dish.name}} Rated: {{dish.stars}}/5</header>
     <img src="/img/{{dish.image_file}}" alt="{{dish.description}}" />
     <p>Description: {{dish.description}}</p>
-</section>
-    {{#each dish.dish_reviews as  |review|}}
-    {{> review-details}}
-    {{/each}}
+</section> --}}
             <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="min-height: 285px; width:575px; padding:4px">
             <div class="modal-dialog modal-xl">
-                <div class="modal-content bg-light">
+                <div class="modal-content bg-blue">
                     <div class="modal-body d-flex justify-content-end">
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close">x</button>
                         <form class="form login-form" action = "/api/reviews" method="post">
           <div class="form-group">
-            <label for="user-review">Please leave your review below:</label>
-            Rating:
+            <label for="user-review">Please login to leave your review below:</label>
              <select id="rating" name = "rating"
-            class="form-select">
-            <option value="1"> 1 </option>
-            <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
-            <option value="4"> 4 </option>
-            <option value="5"> 5 </option>
-            </select>/5
-            <input class="form-input" type="text" name= "review" id="user-review" />
+            class="form-select text-center rounded-md"
+            style="padding: 4px; width: 200px ">
+            <option value="1"> 1 Star</option>
+            <option value="2"> 2 Star</option>
+            <option value="3"> 3 Star</option>
+            <option value="4"> 4 Star</option>
+            <option value="5"> 5 Star</option>
+            </select>
+            <div class="mb-6">
+    <label for="large-input" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Review</label>
+    <input type="text" id="large-input" class="block p-2 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name= "review" id="user-review" >
+        </div>
+
+            {{!-- <input class="form-input" type="text" name= "review" id="user-review" /> --}}
             <input type="hidden" name="dish_id" value="{{dish.id}}" />
-            <button class = "review" type="submit">Submit</button>
+            <button class = "btn review" type="submit">Submit</button>
 
           </div>
-                    </div>
+                </div>
                     <div class="modal-body d-flex"></div>
                 </div>
             </div>
         </div>
 
+    </section>
         {{!-- <script src="/js/addReview.js"></script> --}}

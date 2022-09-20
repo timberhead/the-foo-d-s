@@ -1,12 +1,4 @@
-
-
-
-
-
-
-
-
-<h1 align="center">The Fair Fare</h1>
+<h1 align="center">Fair Fare</h1>
   
 ![badge](https://img.shields.io/badge/license-Apache-blue)<br/>
 ## Table of Contents
@@ -25,68 +17,72 @@
 
 ## Description
 
- Resturant Rating App for Individual Meals.
+Resturant Rating App for Individual Meals.
 
- Our task is to create a simple application that allows a user to provide a review of their favorite meals at restaurants that may not have received high ratings for their overall menus.  This application will act as a messageboard for promoting great meals at restaurants that users may have overlooked because of the lower overall restaurant rating.
+Our task is to create a simple application that allows a user to provide a review of their favorite meals at restaurants that may not have received high ratings for their overall menus. This application will act as a messageboard for promoting great meals at restaurants that users may have overlooked because of the lower overall restaurant rating.
 
- This application will use...........databases to provide updated user reviews.
+This application will use custom API databases to provide updated user reviews.
 
 ## Installation
 
- npm install
+npm install
 
 ## Issues
 
- There are no issues at this time. 
+There are no issues at this time.
 
 ## User Story
 
- AS an average Joe with a favorite meal at a hole in the wall restaurant
- <br/>
- I WANT to share my review with as many other people as possible
- <br/>
- SO THAT I can get the word out about this resturant and discover restaurants with great meals from other users reviews
- <br/>
+AS an average Joe with a favorite meal at a hole in the wall restaurant
+<br/>
+I WANT to share my review with as many other people as possible
+<br/>
+SO THAT I can get the word out about this resturant and discover restaurants with great meals from other users reviews
+<br/>
 
 ## Acceptance Criteria
 
- GIVEN I am using the application "The Fair Fare"
- <br/>
- WHEN I open the application
- <br/>
- THEN the webpage is displayed in the browser 
- <br/>
- WHEN I click on the Login/register button
- <br/>
- THEN I am presented with a Login/Register form 
- <br/>
- WHEN I enter my username and password in the Register form
- <br/>
- THEN I am logged in directed back to the webpage
- <br/>
- WHEN I click on the Category Selector button
- <br/>
- THEN I am presented with a list of restaurants types
- <br/>
- WHEN I click on a resturant type
- <br/>
- THEN I am presented with multiple cards, each representing a local resturant and an image of their signature meal
- <br/>
- WHEN I click on a restaurant card
- <br/>
- THEN I am presented with the restaurant's rating and number of reviews, and the meal's rating and number of reviews
- <br/>
- WHEN I click on a specific meal
- <br/>
- THEN I am presented with a form to add my own review for that meal
- <br/>
- WHEN I complete my review and submit
- <br/>
- THEN my review is added to the database for other users to view 
+GIVEN I am using the application "The Fair Fare"
+<br/>
+WHEN I open the application
+<br/>
+THEN the webpage is displayed in the browser
+<br/>
+WHEN I click on the Login/register button
+<br/>
+THEN I am presented with a Login/Register form
+<br/>
+WHEN I enter my username and password in the Register form
+<br/>
+THEN I am logged in directed back to the webpage
+<br/>
+WHEN I click on the Category Selector button
+<br/>
+THEN I am presented with a list of restaurants types
+<br/>
+WHEN I click on a resturant type
+<br/>
+THEN I am presented with multiple cards, each representing a local resturant and an image of their signature meal
+<br/>
+WHEN I click on a restaurant card
+<br/>
+THEN I am presented with the restaurant's rating and number of reviews, and the meal's rating and number of reviews
+<br/>
+WHEN I click on a specific meal, and I haven't logged in
+<br/>
+THEN I am directed back to the Login/Register form
+<br/>
+WHEN I click on a specific meal
+<br/>
+THEN I am presented with a form to add my own review for that meal
+<br/>
+WHEN I complete my review and submit
+<br/>
+THEN my review is added to the database for other users to view
 
 ## Usage
 
-Once you've opened the webpage and are logged in, you can select types of local restaurants from a list.  After you select a resturant type, you'll see a display of one or more restaurants.  Each resturant will be displayed with its overall rating, and its best meal with its individual rating.  You can simply use the app to find highly rated meals at restaurants that you would have overlooked, due to the restaurants overall rating.  You can also add your own review of a restaurants meal.  Your review will be added to the database to help other people find a great meal. Now everyone can be a foo-d.   
+Once you've opened the webpage and are logged in, you can select types of local restaurants from a list. After you select a resturant type, you'll see a display of one or more restaurants. Each resturant will be displayed with its overall rating, and its best meal with its individual rating. You can simply use the app to find highly rated meals at restaurants that you would have overlooked, due to the restaurants overall rating. You can also add your own review of a restaurants meal. Your review will be added to the database to help other people find a great meal. Now everyone can be a foo-dee.
 
 ## License
 
@@ -95,22 +91,25 @@ Once you've opened the webpage and are logged in, you can select types of local 
 This application is covered by the Apache license.
 
 ## Contribution
- 
- Contact any of us, by email, with any thoughts or questions.
+
+Contact any of us, by email, with any thoughts or questions.
 
 ## Tests
 
- npm test
+npm test
 
 ## Github
 
- Link to our Github repository:
- <br/>
- https://github.com/timberhead/the-foo-d-s
+Link to our Github repository:
+<br/>
+https://github.com/timberhead/the-foo-d-s
 
 ## Deployed Links:
 
-Github.......Google Slides........Etc...........
+Heroku URL: https://the-fair-fare.herokuapp.com/
+
+<img src="./public/img/the-fair-fare.jpeg" alt="glorious cheeseburger" width="500"/>
+
 ## Credits
 
 Sophie Lebron&emsp;&emsp;&emsp;github.com/sclebron&emsp;&emsp;&emsp;&emsp;&emsp;sophieclebron@gmail.com
@@ -128,5 +127,5 @@ Christopher Boyle&nbsp;&nbsp;&emsp;github.com/timberhead&nbsp;&nbsp;&nbsp;&emsp;
 <br/>
 <br/>
 <br/>
+
 <h3 align="center">This README was generated with ❤️ by fine folks at the-foo-d-s</h3>
- 

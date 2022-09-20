@@ -1,11 +1,23 @@
+
 <section class="restaurant">
-  <img src="/images/{{tbd}}" alt="{{tbd}}" />
-  <div class="card">
-    <h3>{{restaurant.name}} Overall Rating: {{restaurant.stars}}</h3>
+  <div class="card text-center">
+    <h3>{{restaurant.name}}</h3>
     <p> {{restaurant.location.street_address}}</p>
     <p> {{restaurant.location.city}}, {{restaurant.location.state}}, {{restaurant.location.zipcode}}</p>
   </div>
+ <section
+      class=" m-5 flex-row flex justify-center"
+    >
+{{!-- <div> --}}
+        <h2 class="text-3xl font-mono pt-2">Overall Rating: </h2>
+<div class="flex items-center">
+    <svg aria-hidden="true" class="w-10 h-10 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Rating star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+    <p class="ml-1 pt-3 text-xl font-bold text-gray-900 dark:text-white">{{restaurant.stars}}</p>
+</div>
+      </div>
+ </section>
+ <section class="md:flex justify-evenly">
   {{#each dishes as |dish|}}
 {{> restaurant-details}}
 {{/each}}
-    </section>
+</section>
