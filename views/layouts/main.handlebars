@@ -20,16 +20,20 @@
 
   <body>
     <header>
-      <div class="text-center justify-center items-center font-bold">
+
+      <div class="text-center justify-center items-center font-light">
+
         <h1
           class="lg:text-9xl sm:text-6xl text-4xl mb-10 text-blue-600 hover:text-black duration-300"
         ><a href="/">Fair Fare</a></h1>
         <h5
-          class="text-blue-600 text-xl flex justify-center items-center transform hover:scale-110 duration-300"
-        >Finding the perfect plate</h5>
+          class="lg:text-xl sm:text-base text-sm text-blue-600 text-center justify-center items-center italic"
+        >Made with ❤️ by the foo-d-s</h5>
+
       </div>
     </header>
     <nav>
+
       <a href="/">Home</a>
       {{#if loggedIn}}
         <button id="logout" class="btn-no-style">Logout</button>
@@ -37,18 +41,18 @@
         <a href="/login">Login</a>
       {{/if}}
 
+      {{! <main>
+
+      </main> }}
     </nav>
-    <main>
-
-    </main>
-
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
+
     {{{body}}}
-    <footer class="text-blue-600 text-center justify-center items-center">Made
-      with ❤️ by the foo-d-s</footer>
-    <script src="app.js"></script>
-    <script src=".../assets/script.js"></script>
+
   </body>
+  <script src="app.js"></script>
+  <script src=".../assets/script.js"></script>
+
 </html>

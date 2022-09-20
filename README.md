@@ -106,7 +106,7 @@ https://github.com/timberhead/the-foo-d-s
 
 ## Deployed Links:
 
-Heroku git URL: https://git.heroku.com/the-foo-d-s.git
+Heroku URL: https://the-fair-fare.herokuapp.com/
 
 <img src="./public/img/the-fair-fare.jpeg" alt="glorious cheeseburger" width="500"/>
 

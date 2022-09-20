@@ -389,7 +389,7 @@ const dishReviewsData = [
   },
   {
     rating: 1,
-    review: "Best meatball sandwich in the world!!!",
+    review: "Not the best!!!",
     dish_id: 10,
     user_id: null,
   },
@@ -714,7 +714,7 @@ const dishReviewsData = [
   },
   {
     rating: 1,
-    review: "Best meatball sandwich in the world!!!",
+    review: "More like Inedible Italian!",
     dish_id: 28,
     user_id: null,
   },

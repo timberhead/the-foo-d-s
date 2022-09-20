@@ -1,16 +1,16 @@
 {{! <div class=""> }}
 <div class="relative inline-block text-center">
-    <div  class="inline-flex w-full justify-center border border-gray-300 bg-white px-4 py-2 text-lg font-medium text-blue-600 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-blue-600" id="menu-button" aria-expanded="true" aria-haspopup="true">
+  {{! <div  class="inline-flex w-full justify-center border border-gray-300 bg-white px-4 py-2 text-lg font-medium text-blue-600 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-blue-600" id="menu-button" aria-expanded="true" aria-haspopup="true">
         Category Selector
         <!-- Heroicon name: mini/chevron-down -->
-    </div>
-    <!--OPTION #1-->
+    </div> }}
+  <!--OPTION #1-->
   <!--If the button on the Category selector is clicked, show the menu div.-->
   <!--The menu div has classes assciated with based on the state of the category selector button-->
   <!--If the button is a boolean, true would give the menu a shown status, and the false would hide it. -->
   <!--OPTION #2-->
-    <!--When the button is clicked, it checks the menu div for the hidden class attribute. If it is there, it removes it. If it isn't there, add it.-->
-      <!-- Dropdown menu, show/hide based on menu state.
+  <!--When the button is clicked, it checks the menu div for the hidden class attribute. If it is there, it removes it. If it isn't there, add it.-->
+  <!-- Dropdown menu, show/hide based on menu state.
  
       Entering: "transition ease-out duration-100"
         From: "transform opacity-0 scale-95"
@@ -18,23 +18,30 @@
       Leaving: "transition ease-in duration-75"
         From: "transform opacity-100 scale-100"
         To: "transform opacity-0 scale-95" -->
-<form class="d-flex row-4 category-select" role="search" id="btn-submit">
-  <select
-    class="form-select"
-    id="genrePicker"
-    aria-label="Default select example"
-    style="padding: 4px; width: 450px"
-  >
-    <option selected>Please select your restaurant type:</option>
-    {{#each types as |style|}}
-      <option value="{{id}}">{{type}}</option>
-    {{/each}}
-  </select>
-  <button class="btn btn-primary" type="submit">Go</button>
-</form>
-    <div id="dropdown-menu" class="hidden justify-items-center z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="" tabindex="-1">
-        
-      {{!-- <div id="dropdown-options" class="py-1" role="none">
+  <form class="row-4 category-select" role="search" id="btn-submit">
+    <select
+      class="form-select my-3"
+      id="genrePicker"
+      aria-label="Default select example"
+      style="padding: 3px; width: 375px"
+    >
+      <option selected>Please select your restaurant type:</option>
+      {{#each types as |style|}}
+        <option value="{{id}}">{{type}}</option>
+      {{/each}}
+    </select>
+    <button class="btn btn-primary" type="submit">Go</button>
+  </form>
+  {{! <div }}
+  {{! id="dropdown-menu"
+    class="hidden justify-items-center z-10 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+    role="menu"
+    aria-orientation="vertical"
+    aria-labelledby=""
+    tabindex="-1"
+  > }}
+
+  {{! <div id="dropdown-options" class="py-1" role="none">
         
         <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
         <a href="/api/restaurant/asian" class="text-blue-600 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="Asian">Asian</a>
@@ -42,17 +49,17 @@
         <a href="#" class="text-blue-600 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="Mexican">Mexican</a>
         <a href="#" class="text-blue-600 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="Italian">Italian</a>
         <form method="POST" action="#" role="none">
-          <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3"></button> --}}
-        {{!-- </form> --}}
-      {{!-- </div> --}}
-    </div>
-  </div>
-    <div class="bg-no-repeat h-screen bg-center bg-cover center" style="background-image: url('img/american-food-1.jpg')">
+          <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3"></button> }}
+  {{! </form> }}
+  {{! </div> }}
+  {{! </div> }}
+</div>
+<div
+  class="bg-no-repeat h-screen bg-center bg-cover center"
+  style="background-image: url('img/home.jpg')"
+>
 
-  </div>
-
-
-
+</div>
 
 {{! </div> }}
 
